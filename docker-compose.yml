@@ -1,0 +1,12 @@
+version: "3"
+services:
+  testmod:
+    build:
+      context: ./
+      args:
+        APP_ENV: Development
+        SERVICE_NAME: testMod
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./:/go/src/testMod
